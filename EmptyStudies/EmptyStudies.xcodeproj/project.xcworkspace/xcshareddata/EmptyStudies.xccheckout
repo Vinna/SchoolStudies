@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>83FCEEBA-A23D-40D2-9B5A-5BB7CD2FB045</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EmptyStudies</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B55F664F-40F6-4265-88E0-9B0A5D79FBAF</key>
+		<string>https://github.com/Vinna/SchoolStudies.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EmptyStudies/EmptyStudies.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B55F664F-40F6-4265-88E0-9B0A5D79FBAF</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Vinna/SchoolStudies.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B55F664F-40F6-4265-88E0-9B0A5D79FBAF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B55F664F-40F6-4265-88E0-9B0A5D79FBAF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SchoolStudies</string>
+		</dict>
+	</array>
+</dict>
+</plist>
