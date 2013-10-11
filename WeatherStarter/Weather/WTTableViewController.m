@@ -10,6 +10,10 @@
 #import "WeatherAnimationViewController.h"
 #import "NSDictionary+weather.h"
 #import "NSDictionary+weather_package.h"
+#import <AFHTTPRequestOperationManager.h>
+
+
+static NSString *const BaseURLString = @"http://www.raywenderlich.com/downloads/weather_sample/";
 
 
 @interface WTTableViewController ()
@@ -83,6 +87,49 @@
 
 - (IBAction)jsonTapped:(id)sender
 {
+    NSString *weatherUrl = [NSString stringWithFormat:@"%@weather.php?format=json", BaseURLString];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:weatherUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+        self.weather  = (NSDictionary *)responseObject;
+        self.title = @"JSON Retrieved";
+        [self.tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather"
+                                                     message:[NSString stringWithFormat:@"%@",error]
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [av show];
+    }];
+    
+    
+    /*
+    // 1
+    NSURL *url = [NSURL URLWithString:weatherUrl];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    // 2
+    AFJSONRequestOperation *operation =
+    [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+     // 3
+                                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                        self.weather  = (NSDictionary *)JSON;
+                                                        self.title = @"JSON Retrieved";
+                                                        [self.tableView reloadData];
+                                                    }
+     // 4
+                                                    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Weather"
+                                                                                                     message:[NSString stringWithFormat:@"%@",error]
+                                                                                                    delegate:nil
+                                                                                           cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                                                        [av show];
+                                                    }];
+    
+    // 5
+    [operation start];
+     */
 }
 
 - (IBAction)plistTapped:(id)sender
@@ -110,20 +157,49 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    // Return the number of rows in the section.
+    
+    if(!self.weather)
+        return 0;
+    
+    switch (section) {
+        case 0:{
+            return 1;
+        }
+        case 1:{
+            NSArray *upcomingWeather = [self.weather upcomingWeather];
+            return [upcomingWeather count];
+        }
+        default:
+            return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"WeatherCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSDictionary *daysWeather;
     
-    // Configure the cell...
+    switch (indexPath.section) {
+        case 0:{
+            daysWeather = [self.weather currentCondition];
+            break;
+        }
+        case 1:{
+            NSArray *upcomingWeather = [self.weather upcomingWeather];
+            daysWeather = [upcomingWeather objectAtIndex:indexPath.row];
+        }
+        default:
+            break;
+    }
     
+    cell.textLabel.text = [daysWeather weatherDescription];
+    
+    // maybe some code will be added here later...
     
     return cell;
 }
-
 
 #pragma mark - Table view delegate
 
