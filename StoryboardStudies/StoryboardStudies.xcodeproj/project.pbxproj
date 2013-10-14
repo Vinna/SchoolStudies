@@ -20,6 +20,7 @@
 		1CABDE30180BAFEF001FC406 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CABDE2E180BAFEF001FC406 /* InfoPlist.strings */; };
 		1CABDE32180BAFEF001FC406 /* StoryboardStudiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CABDE31180BAFEF001FC406 /* StoryboardStudiesTests.m */; };
 		1CABDE3C180BB00A001FC406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CABDE3B180BB00A001FC406 /* Main.storyboard */; };
+		1CABDE3F180BB73F001FC406 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CABDE3E180BB73F001FC406 /* ModalViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		1CABDE2F180BAFEF001FC406 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1CABDE31180BAFEF001FC406 /* StoryboardStudiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StoryboardStudiesTests.m; sourceTree = "<group>"; };
 		1CABDE3B180BB00A001FC406 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1CABDE3D180BB73F001FC406 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		1CABDE3E180BB73F001FC406 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				1CABDE1E180BAFEF001FC406 /* Images.xcassets */,
 				1CABDE13180BAFEF001FC406 /* Supporting Files */,
 				1CABDE3B180BB00A001FC406 /* Main.storyboard */,
+				1CABDE3D180BB73F001FC406 /* ModalViewController.h */,
+				1CABDE3E180BB73F001FC406 /* ModalViewController.m */,
 			);
 			path = StoryboardStudies;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 			files = (
 				1CABDE19180BAFEF001FC406 /* main.m in Sources */,
 				1CABDE1D180BAFEF001FC406 /* StoryStuAppDelegate.m in Sources */,
+				1CABDE3F180BB73F001FC406 /* ModalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
