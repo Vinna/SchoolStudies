@@ -97,7 +97,7 @@
         <!--Modal View Controller-->
         <scene sceneID="g7Y-4S-deC">
             <objects>
-                <viewController id="ab3-gc-92A" customClass="ModalViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="modalview" id="ab3-gc-92A" customClass="ModalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SzH-QP-WTx"/>
                         <viewControllerLayoutGuide type="bottom" id="ohX-mj-xNU"/>
@@ -106,7 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lbMain" text="Modal Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="668-am-DHy">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Modal Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="668-am-DHy">
                                 <rect key="frame" x="114" y="273" width="92" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -126,6 +126,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="lbMain" destination="668-am-DHy" id="u0i-3S-i6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Euw-TM-rYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,5 +10,7 @@
 
 @interface ModalViewController : UIViewController
 @property NSString *data;
+@property IBOutlet UILabel *lbMain;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 - (IBAction)dismiss:(id)sender;
 @end

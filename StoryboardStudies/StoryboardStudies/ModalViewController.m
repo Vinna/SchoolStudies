@@ -32,6 +32,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.lbMain setText:self.data];
     NSLog(@"data is : %@",self.data);
     
 }
