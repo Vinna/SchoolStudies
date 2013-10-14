@@ -7,7 +7,7 @@
         <!--Table View Controller - Title-->
         <scene sceneID="ra0-hQ-LEp">
             <objects>
-                <tableViewController id="uYr-3H-nBI" sceneMemberID="viewController">
+                <tableViewController id="uYr-3H-nBI" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ue5-Da-Cad">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,7 +66,7 @@
                     <navigationItem key="navigationItem" title="Title" id="hJ5-MV-woV">
                         <barButtonItem key="rightBarButtonItem" title="Modal" id="g6f-I4-VkS">
                             <connections>
-                                <segue destination="ab3-gc-92A" kind="modal" id="H9V-oB-aCG"/>
+                                <segue destination="ab3-gc-92A" kind="modal" identifier="modalview" id="H9V-oB-aCG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -106,7 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Modal Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="668-am-DHy">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="lbMain" text="Modal Page" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="668-am-DHy">
                                 <rect key="frame" x="114" y="273" width="92" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>

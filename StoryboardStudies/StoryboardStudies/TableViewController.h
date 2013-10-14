@@ -1,5 +1,5 @@
 //
-//  ModalViewController.h
+//  TableViewController.h
 //  StoryboardStudies
 //
 //  Created by adminywen on 13-10-14.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ModalViewController : UIViewController
-@property NSString *data;
-- (IBAction)dismiss:(id)sender;
+@interface TableViewController : UITableViewController
+
 @end

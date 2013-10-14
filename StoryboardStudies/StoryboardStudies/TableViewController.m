@@ -1,22 +1,27 @@
 //
-//  ModalViewController.m
+//  TableViewController.m
 //  StoryboardStudies
 //
 //  Created by adminywen on 13-10-14.
 //  Copyright (c) 2013年 adminywen. All rights reserved.
 //
 
-#import "ModalViewController.h"
+#import "TableViewController.h"
 
-@interface ModalViewController ()
+@interface TableViewController ()
 
 @end
 
-@implementation ModalViewController
+@implementation TableViewController
 
--(IBAction)dismiss:(id)sender
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    //  判断启动的目标View是否为MyViewController
+    if([segue.identifier isEqualToString:@"modalview"])
+    {
+        id theSegue = segue.destinationViewController;
+        [theSegue setValue:@"这里是要传递的值" forKey:@"data"];
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,8 +37,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"data is : %@",self.data);
-    
 }
 
 - (void)didReceiveMemoryWarning

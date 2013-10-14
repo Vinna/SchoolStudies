@@ -21,6 +21,7 @@
 		1CABDE32180BAFEF001FC406 /* StoryboardStudiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CABDE31180BAFEF001FC406 /* StoryboardStudiesTests.m */; };
 		1CABDE3C180BB00A001FC406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CABDE3B180BB00A001FC406 /* Main.storyboard */; };
 		1CABDE3F180BB73F001FC406 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CABDE3E180BB73F001FC406 /* ModalViewController.m */; };
+		1CABDE42180BE16C001FC406 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CABDE41180BE16C001FC406 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		1CABDE3B180BB00A001FC406 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1CABDE3D180BB73F001FC406 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
 		1CABDE3E180BB73F001FC406 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		1CABDE40180BE16C001FC406 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		1CABDE41180BE16C001FC406 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				1CABDE3B180BB00A001FC406 /* Main.storyboard */,
 				1CABDE3D180BB73F001FC406 /* ModalViewController.h */,
 				1CABDE3E180BB73F001FC406 /* ModalViewController.m */,
+				1CABDE40180BE16C001FC406 /* TableViewController.h */,
+				1CABDE41180BE16C001FC406 /* TableViewController.m */,
 			);
 			path = StoryboardStudies;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				1CABDE19180BAFEF001FC406 /* main.m in Sources */,
 				1CABDE1D180BAFEF001FC406 /* StoryStuAppDelegate.m in Sources */,
 				1CABDE3F180BB73F001FC406 /* ModalViewController.m in Sources */,
+				1CABDE42180BE16C001FC406 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +458,7 @@
 				1CABDE37180BAFEF001FC406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CABDE38180BAFEF001FC406 /* Build configuration list for PBXNativeTarget "StoryboardStudiesTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +467,7 @@
 				1CABDE3A180BAFEF001FC406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
